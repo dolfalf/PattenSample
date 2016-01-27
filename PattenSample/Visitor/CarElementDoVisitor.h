@@ -8,15 +8,9 @@
 
 #import <Foundation/Foundation.h>
 
-@class Car;
-@class Wheel;
-@class Engine;
-@class Body;
+@class CarElement;
 
 @interface CarElementDoVisitor : NSObject
 
-- (void)visitCar:(Car *)car;
-- (void)visitWheel:(Wheel *)wheel;
-- (void)visitBody:(Body *)carBody;
-- (void)visitEngine:(Engine *)engine;
+- (void)visit:(CarElement *)element;
 @end

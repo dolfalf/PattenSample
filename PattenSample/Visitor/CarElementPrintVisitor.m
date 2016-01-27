@@ -7,6 +7,7 @@
 //
 
 #import "CarElementPrintVisitor.h"
+#import "CarElement.h"
 #import "Car.h"
 #import "Wheel.h"
 #import "Engine.h"
@@ -15,21 +16,21 @@
 //  차요소 프린트 방문자 이다. CarElementVisitor 인터페이스를 구현하여  각각의 차요소가 실행할 기능을 정의 하였다.
 @implementation CarElementPrintVisitor
 
-- (void)visitCar:(Car *)car {
-    NSLog(@"Visiting %@ car", car.name);
-}
-
-- (void)visitWheel:(Wheel *)wheel {
+- (void)visit:(CarElement *)element {
     
-    NSLog(@"Visiting %@ wheel", wheel.name);
-}
-
-- (void)visitBody:(Body *)body {
-    NSLog(@"Visiting %@ body", body.name);
-}
-
-- (void)visitEngine:(Engine *)engine {
-    NSLog(@"Visiting %@ engine", engine.name);
+    if ([element isMemberOfClass:[Car class]]) {
+        NSLog(@"Visiting %@ car", (Car *)element.name);
+        
+    }else if ([element isMemberOfClass:[Wheel class]]) {
+        NSLog(@"Visiting %@ wheel", (Wheel *)element.name);
+        
+    }else if ([element isMemberOfClass:[Body class]]) {
+        NSLog(@"Visiting %@ body", (Body *)element.name);
+        
+    }else if ([element isMemberOfClass:[Engine class]]) {
+        NSLog(@"Visiting %@ engine", (Engine *)element.name);
+    }
+    
 }
 
 @end

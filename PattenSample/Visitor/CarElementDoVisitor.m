@@ -7,6 +7,7 @@
 //
 
 #import "CarElementDoVisitor.h"
+#import "CarElement.h"
 #import "Car.h"
 #import "Wheel.h"
 #import "Engine.h"
@@ -15,21 +16,20 @@
 //  마찬가지로 위에 방문자와 마찬가지로 각 요소들에 대해서 기능(알고리즘)을 정의해주었다.
 @implementation CarElementDoVisitor
 
-- (void)visitCar:(Car *)car {
-    NSLog(@"Starting my car");
-}
-
-- (void)visitWheel:(Wheel *)wheel {
+- (void)visit:(CarElement *)element {
     
-    NSLog(@"Kicking my %@ wheel", wheel.name);
-}
-
-- (void)visitBody:(Body *)body {
-    NSLog(@"Moving my body");
-}
-
-- (void)visitEngine:(Engine *)engine {
-    NSLog(@"Starting my engine");
+    if ([element isMemberOfClass:[Car class]]) {
+        NSLog(@"Starting my car");
+        
+    }else if ([element isMemberOfClass:[Wheel class]]) {
+        NSLog(@"Kicking my %@ wheel", (Wheel *)element.name);
+        
+    }else if ([element isMemberOfClass:[Body class]]) {
+        NSLog(@"Moving my body");
+        
+    }else if ([element isMemberOfClass:[Engine class]]) {
+        NSLog(@"Starting my engine");
+    }
 }
 
 @end

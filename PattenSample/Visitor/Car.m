@@ -51,7 +51,7 @@
         [element acceptPrintVisitor:visitor];
     }
     
-    [visitor visitCar:self];
+    [visitor visit:self];
 }
 
 // 마찬가지
@@ -62,7 +62,7 @@
         [element acceptDoVisitor:visitor];
     }
     
-    [visitor visitCar:self];
+    [visitor visit:self];
 }
 
 @end

@@ -10,14 +10,4 @@
 
 @implementation Engine
 
-#pragma mark - CarElement protocol
-- (void)acceptPrintVisitor:(CarElementPrintVisitor *)visitor {
-    
-    [visitor visitEngine:self];
-}
-
-- (void)acceptDoVisitor:(CarElementDoVisitor *)visitor {
-    
-    [visitor visitEngine:self];
-}
 @end

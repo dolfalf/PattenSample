@@ -10,13 +10,4 @@
 
 @implementation Body
 
-- (void)acceptPrintVisitor:(CarElementPrintVisitor *)visitor {
-    
-    [visitor visitBody:self];
-}
-
-- (void)acceptDoVisitor:(CarElementDoVisitor *)visitor {
-    
-    [visitor visitBody:self];
-}
 @end
