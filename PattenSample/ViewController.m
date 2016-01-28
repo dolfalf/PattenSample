@@ -11,8 +11,11 @@
 #import "CarElementPrintVisitor.h"
 #import "CarElementDoVisitor.h"
 
+#import "StateContext.h"
+
 typedef NS_ENUM(NSInteger, PattenName) {
     PattenNameVisitor,
+    PattenNameState,
     
 };
 
@@ -30,7 +33,8 @@ typedef NS_ENUM(NSInteger, PattenName) {
     // Do any additional setup after loading the view, typically from a nib.
     
     self.title = @"Patten Sample code";
-    self.menuItems = @[@"Visitor Patten"];
+    self.menuItems = @[@"Visitor Patten",
+                       @"State Patten"];
 }
 
 - (void)didReceiveMemoryWarning {
@@ -65,7 +69,9 @@ typedef NS_ENUM(NSInteger, PattenName) {
         case PattenNameVisitor:
             [self performVisitor];
             break;
-            
+        case PattenNameState:
+            [self performState];
+            break;
         default:
             break;
     }
@@ -89,7 +95,23 @@ typedef NS_ENUM(NSInteger, PattenName) {
     
     CarElementDoVisitor *do_visitor = [CarElementDoVisitor new];
     [car acceptDoVisitor:do_visitor];   //  방문자가 가지고있는 요소별 기능을 실행한다.
+}
+
+- (void)performState {
     
+    /*
+     현재 상황에 따라 같은 일에 대해 다르게 반응을 합니다. 
+     배가 고플 때 밥을 먹으면 배가 부릅니다. 하지만 배가 부를 때 밥을 또 먹으면 배터질 것 같아 화가 납니다. 
+     같은 행동인 "밥을 먹는 것"에 대해 현재 상태가 "배부름"인지 "배고픔"인지에 따라 행동이 달라지는 것입니다.
+     */
+    StateContext *context = [StateContext new];
+    NSLog(@"current state[%@]", context.currentState);
+    [context processEvent:ActionEat];
+    NSLog(@"current state[%@]", context.currentState);
+    [context processEvent:ActionDigest];
+    NSLog(@"current state[%@]", context.currentState);
+    [context processEvent:ActionGotoBed];
+    NSLog(@"current state[%@]", context.currentState);
 }
 
 @end
