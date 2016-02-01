@@ -13,9 +13,13 @@
 
 #import "StateContext.h"
 
+#import "ControlTower.h"
+#import "Airplane.h"
+
 typedef NS_ENUM(NSInteger, PattenName) {
     PattenNameVisitor,
     PattenNameState,
+    PattenNameMediator,
     
 };
 
@@ -34,7 +38,8 @@ typedef NS_ENUM(NSInteger, PattenName) {
     
     self.title = @"Patten Sample code";
     self.menuItems = @[@"Visitor Patten",
-                       @"State Patten"];
+                       @"State Patten",
+                       @"Mediator Patten"];
 }
 
 - (void)didReceiveMemoryWarning {
@@ -71,6 +76,9 @@ typedef NS_ENUM(NSInteger, PattenName) {
             break;
         case PattenNameState:
             [self performState];
+            break;
+        case PattenNameMediator:
+            [self performMediator];
             break;
         default:
             break;
@@ -112,6 +120,28 @@ typedef NS_ENUM(NSInteger, PattenName) {
     NSLog(@"current state[%@]", context.currentState);
     [context processEvent:ActionGotoBed];
     NSLog(@"current state[%@]", context.currentState);
+}
+
+- (void)performMediator {
+    
+    /*
+     비행기가 이착륙하다가 충돌하는 일은 좀체로 일어나지 않습니다. 비행기들끼리 서로 통신하지 않는데도 말이죠. 각각의 비행기는 관제탑하고만 통신을 하고, 관제탑이 각각의 비행기에게 착륙해도 된다 또는 안 된다 식으로 메시지를 보내줍니다. 비행기들끼리 서로서로 직접 통신을 한다면 통신할 경우의 수가 무진장 많아져서 혼란스럽게 됩니다. Mediator 패턴은 관제탑과 같이 통신을 집중시킴으로써 통신의 경로를 줄이고 단순화시키는 역할을 합니다.
+
+     */
+    ControlTower *tower = [ControlTower new];
+    
+    NSMutableArray *airplanes = [NSMutableArray new];
+    
+    for (int i = 0; i < 10; i++) {
+        Airplane *ap = [[Airplane alloc] initWithSeq:i];
+        ap.tower = tower;
+        
+        airplanes[i] = ap;
+    }
+    
+    for (Airplane *airplane in airplanes) {
+        [airplane start];
+    }
 }
 
 @end

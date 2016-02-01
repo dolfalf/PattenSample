@@ -7,6 +7,9 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		BB035FA71C5EF0E400C4479C /* ControlTower.m in Sources */ = {isa = PBXBuildFile; fileRef = BB035FA61C5EF0E400C4479C /* ControlTower.m */; };
+		BB035FAA1C5EF64000C4479C /* Airplane.m in Sources */ = {isa = PBXBuildFile; fileRef = BB035FA91C5EF64000C4479C /* Airplane.m */; };
+		BB035FAD1C5EFAF100C4479C /* Runway.m in Sources */ = {isa = PBXBuildFile; fileRef = BB035FAC1C5EFAF100C4479C /* Runway.m */; };
 		BB10ABCD1C58C38200E084BF /* Hungury.m in Sources */ = {isa = PBXBuildFile; fileRef = BB10ABCC1C58C38200E084BF /* Hungury.m */; };
 		BB10ABD01C58C39100E084BF /* Angry.m in Sources */ = {isa = PBXBuildFile; fileRef = BB10ABCF1C58C39100E084BF /* Angry.m */; };
 		BB10ABD31C58C39D00E084BF /* Full.m in Sources */ = {isa = PBXBuildFile; fileRef = BB10ABD21C58C39D00E084BF /* Full.m */; };
@@ -40,6 +43,12 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		BB035FA51C5EF0E400C4479C /* ControlTower.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ControlTower.h; sourceTree = "<group>"; };
+		BB035FA61C5EF0E400C4479C /* ControlTower.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ControlTower.m; sourceTree = "<group>"; };
+		BB035FA81C5EF64000C4479C /* Airplane.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Airplane.h; sourceTree = "<group>"; };
+		BB035FA91C5EF64000C4479C /* Airplane.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Airplane.m; sourceTree = "<group>"; };
+		BB035FAB1C5EFAF100C4479C /* Runway.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Runway.h; sourceTree = "<group>"; };
+		BB035FAC1C5EFAF100C4479C /* Runway.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Runway.m; sourceTree = "<group>"; };
 		BB10ABCB1C58C38200E084BF /* Hungury.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Hungury.h; sourceTree = "<group>"; };
 		BB10ABCC1C58C38200E084BF /* Hungury.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Hungury.m; sourceTree = "<group>"; };
 		BB10ABCE1C58C39100E084BF /* Angry.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Angry.h; sourceTree = "<group>"; };
@@ -99,6 +108,19 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		BB035FA41C5EEF4400C4479C /* Mediator */ = {
+			isa = PBXGroup;
+			children = (
+				BB035FA51C5EF0E400C4479C /* ControlTower.h */,
+				BB035FA61C5EF0E400C4479C /* ControlTower.m */,
+				BB035FA81C5EF64000C4479C /* Airplane.h */,
+				BB035FA91C5EF64000C4479C /* Airplane.m */,
+				BB035FAB1C5EFAF100C4479C /* Runway.h */,
+				BB035FAC1C5EFAF100C4479C /* Runway.m */,
+			);
+			path = Mediator;
+			sourceTree = "<group>";
+		};
 		BB10ABCA1C58C36B00E084BF /* State */ = {
 			isa = PBXGroup;
 			children = (
@@ -144,6 +166,7 @@
 				BBC2B1D81C5858E6002F44E4 /* ViewController.h */,
 				BBC2B1D91C5858E6002F44E4 /* ViewController.m */,
 				BBC2B1DB1C5858E6002F44E4 /* Main.storyboard */,
+				BB035FA41C5EEF4400C4479C /* Mediator */,
 				BB10ABCA1C58C36B00E084BF /* State */,
 				BBC2B1F71C585CD1002F44E4 /* Visitor */,
 				BBC2B1DE1C5858E6002F44E4 /* Assets.xcassets */,
@@ -297,15 +320,18 @@
 				BBC2B2081C5883F9002F44E4 /* Engine.m in Sources */,
 				BB10ABDC1C58C3F200E084BF /* State.m in Sources */,
 				BBC2B2021C587C64002F44E4 /* CarElementPrintVisitor.m in Sources */,
+				BB035FAA1C5EF64000C4479C /* Airplane.m in Sources */,
 				BB10ABCD1C58C38200E084BF /* Hungury.m in Sources */,
 				BB10ABD01C58C39100E084BF /* Angry.m in Sources */,
 				BBC2B1FF1C587C1B002F44E4 /* CarElement.m in Sources */,
 				BBC2B20E1C588D4E002F44E4 /* Body.m in Sources */,
 				BBC2B1DA1C5858E6002F44E4 /* ViewController.m in Sources */,
 				BBC2B1D71C5858E6002F44E4 /* AppDelegate.m in Sources */,
+				BB035FAD1C5EFAF100C4479C /* Runway.m in Sources */,
 				BB10ABD91C58C3E200E084BF /* StateContext.m in Sources */,
 				BBC2B1D41C5858E6002F44E4 /* main.m in Sources */,
 				BBC2B20B1C588564002F44E4 /* Car.m in Sources */,
+				BB035FA71C5EF0E400C4479C /* ControlTower.m in Sources */,
 				BBC2B1FC1C5860DD002F44E4 /* Wheel.m in Sources */,
 				BBC2B2111C5890F1002F44E4 /* CarElementDoVisitor.m in Sources */,
 			);
