@@ -25,6 +25,10 @@
 #import "PhoneSeller.h"
 #import "Mart.h"
 
+#import "ComponentObject.h"
+#import "Composite.h"
+#import "Leaf.h"
+
 typedef NS_ENUM(NSInteger, PattenName) {
     TestCode,
     PattenNameVisitor,
@@ -33,6 +37,7 @@ typedef NS_ENUM(NSInteger, PattenName) {
     PattenNameFactory,
     PattenNameTempleteMethod,
     PattenNameStrategy,
+    PattenNameComposite,
 };
 
 @interface ViewController () <UITableViewDataSource, UITableViewDelegate>
@@ -57,7 +62,8 @@ typedef NS_ENUM(NSInteger, PattenName) {
                        @"Mediator Patten",
                        @"Factory Patten",
                        @"Templete Method Patten",
-                       @"Strategy Patten"];
+                       @"Strategy Patten",
+                       @"Composite Patten"];
 }
 
 - (void)didReceiveMemoryWarning {
@@ -109,6 +115,9 @@ typedef NS_ENUM(NSInteger, PattenName) {
             break;
         case PattenNameStrategy:
             [self performStrategy];
+            break;
+        case PattenNameComposite:
+            [self performComposite];
             break;
         default:
             break;
@@ -261,6 +270,50 @@ typedef NS_ENUM(NSInteger, PattenName) {
      27가지의 구현체가 필요합니다. Strategy를 쓰면, 9개의 구현체만 필요하며, 
      또 인터페이스를 이용한 프로그램이 가능합니다.
      */
+}
+
+- (void)performComposite {
+    
+    /*
+     파일 데이터와 같은 일반적인 트리 구조의 데이터 타입을 만드는 것이 Composite 패턴입니다. 
+     Composite 패턴에서 주요등장 인물은 3개입니다. 첫째는 상위 컴포넌트. 둘째는 상위 컴포넌트를 상속 받으며 
+     자식 컴포넌트를 가질 수 있는 Composite. 세째는 상위 컴포넌트를 상속 받으며, 하위 컴포넌트를 가질 수 없는 Leaf. 
+     디렉토리가 Composite라면, 파일은 Leaf라고 보시면 됩니다.
+     
+     3. add와 getChildren 의 구현 방법
+     
+     첫째, Component 에서 모든 것을 구현하고, Leaf에서는 add 메쏘드 호출 시 UnsupportedOperationException 을 던집니다. 
+     Component-Composite-Leaf 3 개의 구조가 아니라 Component-Leaf의 2개 구조만 있어도 됩니다. 그래서 구조가 간단해집니다. 
+     그러나 Composite에는 있고, Leaf에는 없는 메쏘드를 구현할 방법이 없어집니다. 위의 예제는 단지 트리구조를 구현하는 것이라 상관없지만, 
+     추가 기능을 구현할 가능성이 있는 경우는 이 방법을 쓰면 후에 문제가 생길 수 있습니다.
+     둘째, Component 에서는 abstract로 선언만 하고 Composite와 Leaf에서 구현을 합니다.
+     Leaf에서는 첫번째 방법과 마찬가지로 UnsupportedOperationException 를 던지면 됩니다. 
+     구조는 복잡하지만, 첫번째 방법에 비해 다른 기능 추가는 상대적으로 쉽습니다.
+     */
+    
+    Composite *main = [[Composite alloc] initWithName:@"Main"];
+    Composite *sub1 = [[Composite alloc] initWithName:@"sub1"];
+    Composite *sub2 = [[Composite alloc] initWithName:@"sub2"];
+    Composite *sub11 = [[Composite alloc] initWithName:@"sub11"];
+    Composite *sub12 = [[Composite alloc] initWithName:@"sub12"];
+    Composite *sub13 = [[Composite alloc] initWithName:@"sub13"];
+    Composite *sub21 = [[Composite alloc] initWithName:@"sub21"];
+    Composite *sub22 = [[Composite alloc] initWithName:@"sub22"];
+    
+    Leaf *leaf14 = [[Leaf alloc] initWithName:@"leaf14"];
+    Leaf *leaf121 = [[Leaf alloc] initWithName:@"leaf121"];
+    
+    [main add:sub1];
+    [main add:sub2];
+    [sub1 add:sub11];
+    [sub1 add:sub12];
+    [sub1 add:sub13];
+    [sub2 add:sub21];
+    [sub2 add:sub22];
+    [sub1 add:leaf14];
+    [sub12 add:leaf121];
+    
+    NSLog(@"%@", [main operation]);
 }
 
 @end

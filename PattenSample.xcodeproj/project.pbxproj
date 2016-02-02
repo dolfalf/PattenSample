@@ -22,6 +22,9 @@
 		BB0D5F8A1C604C2000409769 /* CupSeller.m in Sources */ = {isa = PBXBuildFile; fileRef = BB0D5F891C604C2000409769 /* CupSeller.m */; };
 		BB0D5F8D1C604D0B00409769 /* PhoneSeller.m in Sources */ = {isa = PBXBuildFile; fileRef = BB0D5F8C1C604D0B00409769 /* PhoneSeller.m */; };
 		BB0D5F901C604DB600409769 /* Mart.m in Sources */ = {isa = PBXBuildFile; fileRef = BB0D5F8F1C604DB600409769 /* Mart.m */; };
+		BB0D5F941C60673100409769 /* ComponentObject.m in Sources */ = {isa = PBXBuildFile; fileRef = BB0D5F931C60673100409769 /* ComponentObject.m */; };
+		BB0D5F971C606C3C00409769 /* Composite.m in Sources */ = {isa = PBXBuildFile; fileRef = BB0D5F961C606C3C00409769 /* Composite.m */; };
+		BB0D5F9A1C606E4A00409769 /* Leaf.m in Sources */ = {isa = PBXBuildFile; fileRef = BB0D5F991C606E4A00409769 /* Leaf.m */; };
 		BB10ABCD1C58C38200E084BF /* Hungury.m in Sources */ = {isa = PBXBuildFile; fileRef = BB10ABCC1C58C38200E084BF /* Hungury.m */; };
 		BB10ABD01C58C39100E084BF /* Angry.m in Sources */ = {isa = PBXBuildFile; fileRef = BB10ABCF1C58C39100E084BF /* Angry.m */; };
 		BB10ABD31C58C39D00E084BF /* Full.m in Sources */ = {isa = PBXBuildFile; fileRef = BB10ABD21C58C39D00E084BF /* Full.m */; };
@@ -85,6 +88,12 @@
 		BB0D5F8C1C604D0B00409769 /* PhoneSeller.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PhoneSeller.m; sourceTree = "<group>"; };
 		BB0D5F8E1C604DB600409769 /* Mart.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Mart.h; sourceTree = "<group>"; };
 		BB0D5F8F1C604DB600409769 /* Mart.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Mart.m; sourceTree = "<group>"; };
+		BB0D5F921C60673100409769 /* ComponentObject.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ComponentObject.h; sourceTree = "<group>"; };
+		BB0D5F931C60673100409769 /* ComponentObject.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ComponentObject.m; sourceTree = "<group>"; };
+		BB0D5F951C606C3C00409769 /* Composite.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Composite.h; sourceTree = "<group>"; };
+		BB0D5F961C606C3C00409769 /* Composite.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Composite.m; sourceTree = "<group>"; };
+		BB0D5F981C606E4A00409769 /* Leaf.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Leaf.h; sourceTree = "<group>"; };
+		BB0D5F991C606E4A00409769 /* Leaf.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Leaf.m; sourceTree = "<group>"; };
 		BB10ABCB1C58C38200E084BF /* Hungury.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Hungury.h; sourceTree = "<group>"; };
 		BB10ABCC1C58C38200E084BF /* Hungury.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Hungury.m; sourceTree = "<group>"; };
 		BB10ABCE1C58C39100E084BF /* Angry.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Angry.h; sourceTree = "<group>"; };
@@ -203,6 +212,19 @@
 			path = Strategy;
 			sourceTree = "<group>";
 		};
+		BB0D5F911C60535800409769 /* Composite */ = {
+			isa = PBXGroup;
+			children = (
+				BB0D5F921C60673100409769 /* ComponentObject.h */,
+				BB0D5F931C60673100409769 /* ComponentObject.m */,
+				BB0D5F951C606C3C00409769 /* Composite.h */,
+				BB0D5F961C606C3C00409769 /* Composite.m */,
+				BB0D5F981C606E4A00409769 /* Leaf.h */,
+				BB0D5F991C606E4A00409769 /* Leaf.m */,
+			);
+			path = Composite;
+			sourceTree = "<group>";
+		};
 		BB10ABCA1C58C36B00E084BF /* State */ = {
 			isa = PBXGroup;
 			children = (
@@ -248,6 +270,7 @@
 				BBC2B1D81C5858E6002F44E4 /* ViewController.h */,
 				BBC2B1D91C5858E6002F44E4 /* ViewController.m */,
 				BBC2B1DB1C5858E6002F44E4 /* Main.storyboard */,
+				BB0D5F911C60535800409769 /* Composite */,
 				BB0D5F841C6049C900409769 /* Strategy */,
 				BB0D5F7A1C603BF200409769 /* Template Method */,
 				BB0D5F691C60335700409769 /* Factory */,
@@ -421,12 +444,15 @@
 				BBC2B1DA1C5858E6002F44E4 /* ViewController.m in Sources */,
 				BBC2B1D71C5858E6002F44E4 /* AppDelegate.m in Sources */,
 				BB0D5F761C6035ED00409769 /* Cat.m in Sources */,
+				BB0D5F971C606C3C00409769 /* Composite.m in Sources */,
 				BB035FAD1C5EFAF100C4479C /* Runway.m in Sources */,
+				BB0D5F941C60673100409769 /* ComponentObject.m in Sources */,
 				BB10ABD91C58C3E200E084BF /* StateContext.m in Sources */,
 				BBC2B1D41C5858E6002F44E4 /* main.m in Sources */,
 				BB0D5F791C6035FD00409769 /* Dog.m in Sources */,
 				BBC2B20B1C588564002F44E4 /* Car.m in Sources */,
 				BB035FA71C5EF0E400C4479C /* ControlTower.m in Sources */,
+				BB0D5F9A1C606E4A00409769 /* Leaf.m in Sources */,
 				BB0D5F701C60356000409769 /* Animal.m in Sources */,
 				BBC2B1FC1C5860DD002F44E4 /* Wheel.m in Sources */,
 				BBC2B2111C5890F1002F44E4 /* CarElementDoVisitor.m in Sources */,
