@@ -18,6 +18,10 @@
 		BB0D5F7D1C6040CB00409769 /* Worker.m in Sources */ = {isa = PBXBuildFile; fileRef = BB0D5F7C1C6040CB00409769 /* Worker.m */; };
 		BB0D5F801C60423600409769 /* Designer.m in Sources */ = {isa = PBXBuildFile; fileRef = BB0D5F7F1C60423600409769 /* Designer.m */; };
 		BB0D5F831C60424800409769 /* Gamer.m in Sources */ = {isa = PBXBuildFile; fileRef = BB0D5F821C60424800409769 /* Gamer.m */; };
+		BB0D5F871C604C0E00409769 /* Seller.m in Sources */ = {isa = PBXBuildFile; fileRef = BB0D5F861C604C0E00409769 /* Seller.m */; };
+		BB0D5F8A1C604C2000409769 /* CupSeller.m in Sources */ = {isa = PBXBuildFile; fileRef = BB0D5F891C604C2000409769 /* CupSeller.m */; };
+		BB0D5F8D1C604D0B00409769 /* PhoneSeller.m in Sources */ = {isa = PBXBuildFile; fileRef = BB0D5F8C1C604D0B00409769 /* PhoneSeller.m */; };
+		BB0D5F901C604DB600409769 /* Mart.m in Sources */ = {isa = PBXBuildFile; fileRef = BB0D5F8F1C604DB600409769 /* Mart.m */; };
 		BB10ABCD1C58C38200E084BF /* Hungury.m in Sources */ = {isa = PBXBuildFile; fileRef = BB10ABCC1C58C38200E084BF /* Hungury.m */; };
 		BB10ABD01C58C39100E084BF /* Angry.m in Sources */ = {isa = PBXBuildFile; fileRef = BB10ABCF1C58C39100E084BF /* Angry.m */; };
 		BB10ABD31C58C39D00E084BF /* Full.m in Sources */ = {isa = PBXBuildFile; fileRef = BB10ABD21C58C39D00E084BF /* Full.m */; };
@@ -73,6 +77,14 @@
 		BB0D5F7F1C60423600409769 /* Designer.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Designer.m; sourceTree = "<group>"; };
 		BB0D5F811C60424800409769 /* Gamer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Gamer.h; sourceTree = "<group>"; };
 		BB0D5F821C60424800409769 /* Gamer.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Gamer.m; sourceTree = "<group>"; };
+		BB0D5F851C604C0E00409769 /* Seller.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Seller.h; sourceTree = "<group>"; };
+		BB0D5F861C604C0E00409769 /* Seller.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Seller.m; sourceTree = "<group>"; };
+		BB0D5F881C604C2000409769 /* CupSeller.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CupSeller.h; sourceTree = "<group>"; };
+		BB0D5F891C604C2000409769 /* CupSeller.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CupSeller.m; sourceTree = "<group>"; };
+		BB0D5F8B1C604D0B00409769 /* PhoneSeller.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PhoneSeller.h; sourceTree = "<group>"; };
+		BB0D5F8C1C604D0B00409769 /* PhoneSeller.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PhoneSeller.m; sourceTree = "<group>"; };
+		BB0D5F8E1C604DB600409769 /* Mart.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Mart.h; sourceTree = "<group>"; };
+		BB0D5F8F1C604DB600409769 /* Mart.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Mart.m; sourceTree = "<group>"; };
 		BB10ABCB1C58C38200E084BF /* Hungury.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Hungury.h; sourceTree = "<group>"; };
 		BB10ABCC1C58C38200E084BF /* Hungury.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Hungury.m; sourceTree = "<group>"; };
 		BB10ABCE1C58C39100E084BF /* Angry.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Angry.h; sourceTree = "<group>"; };
@@ -162,7 +174,7 @@
 			path = Factory;
 			sourceTree = "<group>";
 		};
-		BB0D5F7A1C603BF200409769 /* TemplateMethod */ = {
+		BB0D5F7A1C603BF200409769 /* Template Method */ = {
 			isa = PBXGroup;
 			children = (
 				BB0D5F7B1C6040CB00409769 /* Worker.h */,
@@ -172,7 +184,23 @@
 				BB0D5F811C60424800409769 /* Gamer.h */,
 				BB0D5F821C60424800409769 /* Gamer.m */,
 			);
+			name = "Template Method";
 			path = TemplateMethod;
+			sourceTree = "<group>";
+		};
+		BB0D5F841C6049C900409769 /* Strategy */ = {
+			isa = PBXGroup;
+			children = (
+				BB0D5F851C604C0E00409769 /* Seller.h */,
+				BB0D5F861C604C0E00409769 /* Seller.m */,
+				BB0D5F881C604C2000409769 /* CupSeller.h */,
+				BB0D5F891C604C2000409769 /* CupSeller.m */,
+				BB0D5F8B1C604D0B00409769 /* PhoneSeller.h */,
+				BB0D5F8C1C604D0B00409769 /* PhoneSeller.m */,
+				BB0D5F8E1C604DB600409769 /* Mart.h */,
+				BB0D5F8F1C604DB600409769 /* Mart.m */,
+			);
+			path = Strategy;
 			sourceTree = "<group>";
 		};
 		BB10ABCA1C58C36B00E084BF /* State */ = {
@@ -220,7 +248,8 @@
 				BBC2B1D81C5858E6002F44E4 /* ViewController.h */,
 				BBC2B1D91C5858E6002F44E4 /* ViewController.m */,
 				BBC2B1DB1C5858E6002F44E4 /* Main.storyboard */,
-				BB0D5F7A1C603BF200409769 /* TemplateMethod */,
+				BB0D5F841C6049C900409769 /* Strategy */,
+				BB0D5F7A1C603BF200409769 /* Template Method */,
 				BB0D5F691C60335700409769 /* Factory */,
 				BB035FA41C5EEF4400C4479C /* Mediator */,
 				BB10ABCA1C58C36B00E084BF /* State */,
@@ -382,10 +411,13 @@
 				BBC2B2021C587C64002F44E4 /* CarElementPrintVisitor.m in Sources */,
 				BB035FAA1C5EF64000C4479C /* Airplane.m in Sources */,
 				BB10ABCD1C58C38200E084BF /* Hungury.m in Sources */,
+				BB0D5F8A1C604C2000409769 /* CupSeller.m in Sources */,
 				BB10ABD01C58C39100E084BF /* Angry.m in Sources */,
 				BBC2B1FF1C587C1B002F44E4 /* CarElement.m in Sources */,
 				BBC2B20E1C588D4E002F44E4 /* Body.m in Sources */,
+				BB0D5F871C604C0E00409769 /* Seller.m in Sources */,
 				BB0D5F731C6035E000409769 /* Cow.m in Sources */,
+				BB0D5F8D1C604D0B00409769 /* PhoneSeller.m in Sources */,
 				BBC2B1DA1C5858E6002F44E4 /* ViewController.m in Sources */,
 				BBC2B1D71C5858E6002F44E4 /* AppDelegate.m in Sources */,
 				BB0D5F761C6035ED00409769 /* Cat.m in Sources */,
@@ -398,6 +430,7 @@
 				BB0D5F701C60356000409769 /* Animal.m in Sources */,
 				BBC2B1FC1C5860DD002F44E4 /* Wheel.m in Sources */,
 				BBC2B2111C5890F1002F44E4 /* CarElementDoVisitor.m in Sources */,
+				BB0D5F901C604DB600409769 /* Mart.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
