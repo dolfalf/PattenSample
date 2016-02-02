@@ -27,6 +27,11 @@
 		BB0D5F9A1C606E4A00409769 /* Leaf.m in Sources */ = {isa = PBXBuildFile; fileRef = BB0D5F991C606E4A00409769 /* Leaf.m */; };
 		BB0D5FB41C60777900409769 /* Decorator.m in Sources */ = {isa = PBXBuildFile; fileRef = BB0D5FB31C60777900409769 /* Decorator.m */; };
 		BB0D5FB71C60778900409769 /* ChildDecorator.m in Sources */ = {isa = PBXBuildFile; fileRef = BB0D5FB61C60778900409769 /* ChildDecorator.m */; };
+		BB0D5FBB1C607B3100409769 /* Expert.m in Sources */ = {isa = PBXBuildFile; fileRef = BB0D5FBA1C607B3100409769 /* Expert.m */; };
+		BB0D5FBE1C6080A800409769 /* Problem.m in Sources */ = {isa = PBXBuildFile; fileRef = BB0D5FBD1C6080A800409769 /* Problem.m */; };
+		BB0D5FC11C6082DE00409769 /* Fighter.m in Sources */ = {isa = PBXBuildFile; fileRef = BB0D5FC01C6082DE00409769 /* Fighter.m */; };
+		BB0D5FC41C6082F400409769 /* Hacker.m in Sources */ = {isa = PBXBuildFile; fileRef = BB0D5FC31C6082F400409769 /* Hacker.m */; };
+		BB0D5FC71C60830900409769 /* Casanova.m in Sources */ = {isa = PBXBuildFile; fileRef = BB0D5FC61C60830900409769 /* Casanova.m */; };
 		BB10ABCD1C58C38200E084BF /* Hungury.m in Sources */ = {isa = PBXBuildFile; fileRef = BB10ABCC1C58C38200E084BF /* Hungury.m */; };
 		BB10ABD01C58C39100E084BF /* Angry.m in Sources */ = {isa = PBXBuildFile; fileRef = BB10ABCF1C58C39100E084BF /* Angry.m */; };
 		BB10ABD31C58C39D00E084BF /* Full.m in Sources */ = {isa = PBXBuildFile; fileRef = BB10ABD21C58C39D00E084BF /* Full.m */; };
@@ -100,6 +105,16 @@
 		BB0D5FB31C60777900409769 /* Decorator.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Decorator.m; sourceTree = "<group>"; };
 		BB0D5FB51C60778900409769 /* ChildDecorator.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ChildDecorator.h; sourceTree = "<group>"; };
 		BB0D5FB61C60778900409769 /* ChildDecorator.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ChildDecorator.m; sourceTree = "<group>"; };
+		BB0D5FB91C607B3100409769 /* Expert.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Expert.h; sourceTree = "<group>"; };
+		BB0D5FBA1C607B3100409769 /* Expert.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Expert.m; sourceTree = "<group>"; };
+		BB0D5FBC1C6080A800409769 /* Problem.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Problem.h; sourceTree = "<group>"; };
+		BB0D5FBD1C6080A800409769 /* Problem.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Problem.m; sourceTree = "<group>"; };
+		BB0D5FBF1C6082DE00409769 /* Fighter.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Fighter.h; sourceTree = "<group>"; };
+		BB0D5FC01C6082DE00409769 /* Fighter.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Fighter.m; sourceTree = "<group>"; };
+		BB0D5FC21C6082F400409769 /* Hacker.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Hacker.h; sourceTree = "<group>"; };
+		BB0D5FC31C6082F400409769 /* Hacker.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Hacker.m; sourceTree = "<group>"; };
+		BB0D5FC51C60830900409769 /* Casanova.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Casanova.h; sourceTree = "<group>"; };
+		BB0D5FC61C60830900409769 /* Casanova.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Casanova.m; sourceTree = "<group>"; };
 		BB10ABCB1C58C38200E084BF /* Hungury.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Hungury.h; sourceTree = "<group>"; };
 		BB10ABCC1C58C38200E084BF /* Hungury.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Hungury.m; sourceTree = "<group>"; };
 		BB10ABCE1C58C39100E084BF /* Angry.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Angry.h; sourceTree = "<group>"; };
@@ -242,6 +257,23 @@
 			path = Decorator;
 			sourceTree = "<group>";
 		};
+		BB0D5FB81C607AD300409769 /* Chain of Responsibility */ = {
+			isa = PBXGroup;
+			children = (
+				BB0D5FBC1C6080A800409769 /* Problem.h */,
+				BB0D5FBD1C6080A800409769 /* Problem.m */,
+				BB0D5FB91C607B3100409769 /* Expert.h */,
+				BB0D5FBA1C607B3100409769 /* Expert.m */,
+				BB0D5FBF1C6082DE00409769 /* Fighter.h */,
+				BB0D5FC01C6082DE00409769 /* Fighter.m */,
+				BB0D5FC21C6082F400409769 /* Hacker.h */,
+				BB0D5FC31C6082F400409769 /* Hacker.m */,
+				BB0D5FC51C60830900409769 /* Casanova.h */,
+				BB0D5FC61C60830900409769 /* Casanova.m */,
+			);
+			path = "Chain of Responsibility";
+			sourceTree = "<group>";
+		};
 		BB10ABCA1C58C36B00E084BF /* State */ = {
 			isa = PBXGroup;
 			children = (
@@ -287,6 +319,7 @@
 				BBC2B1D81C5858E6002F44E4 /* ViewController.h */,
 				BBC2B1D91C5858E6002F44E4 /* ViewController.m */,
 				BBC2B1DB1C5858E6002F44E4 /* Main.storyboard */,
+				BB0D5FB81C607AD300409769 /* Chain of Responsibility */,
 				BB0D5FB11C60771600409769 /* Decorator */,
 				BB0D5F911C60535800409769 /* Composite */,
 				BB0D5F841C6049C900409769 /* Strategy */,
@@ -450,6 +483,7 @@
 				BB0D5F7D1C6040CB00409769 /* Worker.m in Sources */,
 				BB0D5F6D1C6034C100409769 /* AnimalFactory.m in Sources */,
 				BBC2B2021C587C64002F44E4 /* CarElementPrintVisitor.m in Sources */,
+				BB0D5FC41C6082F400409769 /* Hacker.m in Sources */,
 				BB035FAA1C5EF64000C4479C /* Airplane.m in Sources */,
 				BB10ABCD1C58C38200E084BF /* Hungury.m in Sources */,
 				BB0D5F8A1C604C2000409769 /* CupSeller.m in Sources */,
@@ -462,15 +496,19 @@
 				BBC2B1DA1C5858E6002F44E4 /* ViewController.m in Sources */,
 				BBC2B1D71C5858E6002F44E4 /* AppDelegate.m in Sources */,
 				BB0D5F761C6035ED00409769 /* Cat.m in Sources */,
+				BB0D5FBE1C6080A800409769 /* Problem.m in Sources */,
 				BB0D5F971C606C3C00409769 /* Composite.m in Sources */,
 				BB035FAD1C5EFAF100C4479C /* Runway.m in Sources */,
 				BB0D5F941C60673100409769 /* ComponentObject.m in Sources */,
 				BB10ABD91C58C3E200E084BF /* StateContext.m in Sources */,
 				BBC2B1D41C5858E6002F44E4 /* main.m in Sources */,
+				BB0D5FC71C60830900409769 /* Casanova.m in Sources */,
 				BB0D5F791C6035FD00409769 /* Dog.m in Sources */,
+				BB0D5FC11C6082DE00409769 /* Fighter.m in Sources */,
 				BBC2B20B1C588564002F44E4 /* Car.m in Sources */,
 				BB035FA71C5EF0E400C4479C /* ControlTower.m in Sources */,
 				BB0D5FB41C60777900409769 /* Decorator.m in Sources */,
+				BB0D5FBB1C607B3100409769 /* Expert.m in Sources */,
 				BB0D5FB71C60778900409769 /* ChildDecorator.m in Sources */,
 				BB0D5F9A1C606E4A00409769 /* Leaf.m in Sources */,
 				BB0D5F701C60356000409769 /* Animal.m in Sources */,
