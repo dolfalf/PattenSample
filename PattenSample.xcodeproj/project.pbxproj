@@ -32,6 +32,10 @@
 		BB0D5FC11C6082DE00409769 /* Fighter.m in Sources */ = {isa = PBXBuildFile; fileRef = BB0D5FC01C6082DE00409769 /* Fighter.m */; };
 		BB0D5FC41C6082F400409769 /* Hacker.m in Sources */ = {isa = PBXBuildFile; fileRef = BB0D5FC31C6082F400409769 /* Hacker.m */; };
 		BB0D5FC71C60830900409769 /* Casanova.m in Sources */ = {isa = PBXBuildFile; fileRef = BB0D5FC61C60830900409769 /* Casanova.m */; };
+		BB0D5FCB1C60901D00409769 /* TV.m in Sources */ = {isa = PBXBuildFile; fileRef = BB0D5FCA1C60901D00409769 /* TV.m */; };
+		BB0D5FCE1C60902F00409769 /* Audio.m in Sources */ = {isa = PBXBuildFile; fileRef = BB0D5FCD1C60902F00409769 /* Audio.m */; };
+		BB0D5FD11C60904800409769 /* Light.m in Sources */ = {isa = PBXBuildFile; fileRef = BB0D5FD01C60904800409769 /* Light.m */; };
+		BB0D5FD41C6090C000409769 /* Home.m in Sources */ = {isa = PBXBuildFile; fileRef = BB0D5FD31C6090C000409769 /* Home.m */; };
 		BB10ABCD1C58C38200E084BF /* Hungury.m in Sources */ = {isa = PBXBuildFile; fileRef = BB10ABCC1C58C38200E084BF /* Hungury.m */; };
 		BB10ABD01C58C39100E084BF /* Angry.m in Sources */ = {isa = PBXBuildFile; fileRef = BB10ABCF1C58C39100E084BF /* Angry.m */; };
 		BB10ABD31C58C39D00E084BF /* Full.m in Sources */ = {isa = PBXBuildFile; fileRef = BB10ABD21C58C39D00E084BF /* Full.m */; };
@@ -115,6 +119,14 @@
 		BB0D5FC31C6082F400409769 /* Hacker.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Hacker.m; sourceTree = "<group>"; };
 		BB0D5FC51C60830900409769 /* Casanova.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Casanova.h; sourceTree = "<group>"; };
 		BB0D5FC61C60830900409769 /* Casanova.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Casanova.m; sourceTree = "<group>"; };
+		BB0D5FC91C60901D00409769 /* TV.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TV.h; sourceTree = "<group>"; };
+		BB0D5FCA1C60901D00409769 /* TV.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TV.m; sourceTree = "<group>"; };
+		BB0D5FCC1C60902F00409769 /* Audio.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Audio.h; sourceTree = "<group>"; };
+		BB0D5FCD1C60902F00409769 /* Audio.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Audio.m; sourceTree = "<group>"; };
+		BB0D5FCF1C60904800409769 /* Light.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Light.h; sourceTree = "<group>"; };
+		BB0D5FD01C60904800409769 /* Light.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Light.m; sourceTree = "<group>"; };
+		BB0D5FD21C6090C000409769 /* Home.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Home.h; sourceTree = "<group>"; };
+		BB0D5FD31C6090C000409769 /* Home.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Home.m; sourceTree = "<group>"; };
 		BB10ABCB1C58C38200E084BF /* Hungury.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Hungury.h; sourceTree = "<group>"; };
 		BB10ABCC1C58C38200E084BF /* Hungury.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Hungury.m; sourceTree = "<group>"; };
 		BB10ABCE1C58C39100E084BF /* Angry.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Angry.h; sourceTree = "<group>"; };
@@ -274,6 +286,21 @@
 			path = "Chain of Responsibility";
 			sourceTree = "<group>";
 		};
+		BB0D5FC81C608EFB00409769 /* Facade */ = {
+			isa = PBXGroup;
+			children = (
+				BB0D5FC91C60901D00409769 /* TV.h */,
+				BB0D5FCA1C60901D00409769 /* TV.m */,
+				BB0D5FCC1C60902F00409769 /* Audio.h */,
+				BB0D5FCD1C60902F00409769 /* Audio.m */,
+				BB0D5FCF1C60904800409769 /* Light.h */,
+				BB0D5FD01C60904800409769 /* Light.m */,
+				BB0D5FD21C6090C000409769 /* Home.h */,
+				BB0D5FD31C6090C000409769 /* Home.m */,
+			);
+			path = Facade;
+			sourceTree = "<group>";
+		};
 		BB10ABCA1C58C36B00E084BF /* State */ = {
 			isa = PBXGroup;
 			children = (
@@ -319,6 +346,7 @@
 				BBC2B1D81C5858E6002F44E4 /* ViewController.h */,
 				BBC2B1D91C5858E6002F44E4 /* ViewController.m */,
 				BBC2B1DB1C5858E6002F44E4 /* Main.storyboard */,
+				BB0D5FC81C608EFB00409769 /* Facade */,
 				BB0D5FB81C607AD300409769 /* Chain of Responsibility */,
 				BB0D5FB11C60771600409769 /* Decorator */,
 				BB0D5F911C60535800409769 /* Composite */,
@@ -474,6 +502,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				BB0D5FCE1C60902F00409769 /* Audio.m in Sources */,
 				BB0D5F831C60424800409769 /* Gamer.m in Sources */,
 				BB10ABD61C58C3B300E084BF /* Sleeping.m in Sources */,
 				BB10ABD31C58C39D00E084BF /* Full.m in Sources */,
@@ -495,6 +524,7 @@
 				BB0D5F8D1C604D0B00409769 /* PhoneSeller.m in Sources */,
 				BBC2B1DA1C5858E6002F44E4 /* ViewController.m in Sources */,
 				BBC2B1D71C5858E6002F44E4 /* AppDelegate.m in Sources */,
+				BB0D5FD11C60904800409769 /* Light.m in Sources */,
 				BB0D5F761C6035ED00409769 /* Cat.m in Sources */,
 				BB0D5FBE1C6080A800409769 /* Problem.m in Sources */,
 				BB0D5F971C606C3C00409769 /* Composite.m in Sources */,
@@ -507,10 +537,12 @@
 				BB0D5FC11C6082DE00409769 /* Fighter.m in Sources */,
 				BBC2B20B1C588564002F44E4 /* Car.m in Sources */,
 				BB035FA71C5EF0E400C4479C /* ControlTower.m in Sources */,
+				BB0D5FD41C6090C000409769 /* Home.m in Sources */,
 				BB0D5FB41C60777900409769 /* Decorator.m in Sources */,
 				BB0D5FBB1C607B3100409769 /* Expert.m in Sources */,
 				BB0D5FB71C60778900409769 /* ChildDecorator.m in Sources */,
 				BB0D5F9A1C606E4A00409769 /* Leaf.m in Sources */,
+				BB0D5FCB1C60901D00409769 /* TV.m in Sources */,
 				BB0D5F701C60356000409769 /* Animal.m in Sources */,
 				BBC2B1FC1C5860DD002F44E4 /* Wheel.m in Sources */,
 				BBC2B2111C5890F1002F44E4 /* CarElementDoVisitor.m in Sources */,
