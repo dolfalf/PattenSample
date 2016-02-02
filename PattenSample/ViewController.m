@@ -39,6 +39,9 @@
 
 #import "Home.h"
 
+#import "BatmanBuilder.h"
+#import "Director.h"
+
 typedef NS_ENUM(NSInteger, PattenName) {
     TestCode,
     PattenNameVisitor,
@@ -51,6 +54,7 @@ typedef NS_ENUM(NSInteger, PattenName) {
     PattenNameDecorator,
     PattenNameChainOfResponsibility,
     PattenNameFacade,
+    PattenNameBuilder,
 };
 
 @interface ViewController () <UITableViewDataSource, UITableViewDelegate>
@@ -78,7 +82,8 @@ typedef NS_ENUM(NSInteger, PattenName) {
                        @"Composite Patten",
                        @"Decorator Patten",
                        @"Chain of responsibility Pattten",
-                       @"Facade Patten"];
+                       @"Facade Patten",
+                       @"Builder Patten"];
 }
 
 - (void)didReceiveMemoryWarning {
@@ -143,6 +148,8 @@ typedef NS_ENUM(NSInteger, PattenName) {
         case PattenNameFacade:
             [self performFacade];
             break;
+            case PattenNameBuilder:
+            [self performBuilder];
         default:
             break;
     }
@@ -424,4 +431,32 @@ typedef NS_ENUM(NSInteger, PattenName) {
     [home enjoyMusic];
     [home goOut];
 }
+
+- (void)performBuilder {
+    /*
+     뭔가가 만들어 지는 과정은 꽤나 복잡할 수가 있습니다. 게다가 그 복잡한 과정이 순서대로 실행되어야 할 때도 있습니다. 
+     객체의 생성에 있어서 이런 복잡한 과정들을 분리해 내는 것이 Builder 패턴입니다.
+     
+     Hero라는 클래스가 있습니다. 이 클래스는 그냥 생성자만 호출해서는 아무 쓸모없는 클래스입니다. 
+     이런 저런 정보들이 많이 쎄팅이 되어야 비로소 쓸만한 객체가 됩니다.(예제에서는 setArmSource()과 setLegSource()와 같은 게 
+     그런 복잡한 세팅 과정에 관여하는 메쏘듭니다.) 따라서 이 클래스의 객체를 생성하는 과정은 매우 번거롭습니다.
+     이런 번거로운 과정을 Director에서 간단하게 build()라는 메쏘드로 해결을 하려고 합니다. build()라는 메쏘드는 참 간단한 것 같은데, 
+     번거로운 과정을 어떻게 다 커버하느냐는 결국 Builder에 위임해서 해결합니다.
+     Builder는 비교적 세부적인 사항들을 다룹니다. 이에 비해 Director는 좀 더 포괄적인 과정은 다룹니다. 
+     위의 예제의 경우는 Builder는 팔은 어떻게 만들어 지고 다리는 어떻게 만들어지는 지 등과 같은 것을 다루며(세부적인 사항인
+     makeArm(), makeLeg()와 같은 메쏘드), Director는 팔을 만들고 다리를 만들면 대략 Hero 하나 완성시킬 수 있다는 
+     전체적인 로직(포괄적인 과정인 build() 메쏘드)을 다룹니다. 즉, Director는 다른 Hero를 만드는데도 활용할 수 있지만, 
+     Builder는 각각의 Hero에 국한됩니다.
+     
+     위의 예제는 예제인 만큼 간단하게 만들었습니다만, Hero를 만들기 위해서 수십수백 가지의 정보가 세팅되어야 한다고 칩시다. 
+     이럴 때, Hero의 생성자에 그런 정보들을 다 세팅해줄 수는 없습니다.
+     */
+    Builder *builder = [BatmanBuilder new];
+    Director *director = [[Director alloc] initWithBuilder:builder];
+    [director build];
+
+    Hero *hero = [director getHero];
+    [hero showResult];
+}
+
 @end

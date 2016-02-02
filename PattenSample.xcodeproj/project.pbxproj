@@ -36,6 +36,10 @@
 		BB0D5FCE1C60902F00409769 /* Audio.m in Sources */ = {isa = PBXBuildFile; fileRef = BB0D5FCD1C60902F00409769 /* Audio.m */; };
 		BB0D5FD11C60904800409769 /* Light.m in Sources */ = {isa = PBXBuildFile; fileRef = BB0D5FD01C60904800409769 /* Light.m */; };
 		BB0D5FD41C6090C000409769 /* Home.m in Sources */ = {isa = PBXBuildFile; fileRef = BB0D5FD31C6090C000409769 /* Home.m */; };
+		BB0D5FD81C609AF800409769 /* Hero.m in Sources */ = {isa = PBXBuildFile; fileRef = BB0D5FD71C609AF800409769 /* Hero.m */; };
+		BB0D5FDB1C609CC800409769 /* Builder.m in Sources */ = {isa = PBXBuildFile; fileRef = BB0D5FDA1C609CC800409769 /* Builder.m */; };
+		BB0D5FDE1C609DF200409769 /* BatmanBuilder.m in Sources */ = {isa = PBXBuildFile; fileRef = BB0D5FDD1C609DF200409769 /* BatmanBuilder.m */; };
+		BB0D5FE11C60A0DF00409769 /* Director.m in Sources */ = {isa = PBXBuildFile; fileRef = BB0D5FE01C60A0DF00409769 /* Director.m */; };
 		BB10ABCD1C58C38200E084BF /* Hungury.m in Sources */ = {isa = PBXBuildFile; fileRef = BB10ABCC1C58C38200E084BF /* Hungury.m */; };
 		BB10ABD01C58C39100E084BF /* Angry.m in Sources */ = {isa = PBXBuildFile; fileRef = BB10ABCF1C58C39100E084BF /* Angry.m */; };
 		BB10ABD31C58C39D00E084BF /* Full.m in Sources */ = {isa = PBXBuildFile; fileRef = BB10ABD21C58C39D00E084BF /* Full.m */; };
@@ -127,6 +131,14 @@
 		BB0D5FD01C60904800409769 /* Light.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Light.m; sourceTree = "<group>"; };
 		BB0D5FD21C6090C000409769 /* Home.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Home.h; sourceTree = "<group>"; };
 		BB0D5FD31C6090C000409769 /* Home.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Home.m; sourceTree = "<group>"; };
+		BB0D5FD61C609AF800409769 /* Hero.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Hero.h; sourceTree = "<group>"; };
+		BB0D5FD71C609AF800409769 /* Hero.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Hero.m; sourceTree = "<group>"; };
+		BB0D5FD91C609CC800409769 /* Builder.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Builder.h; sourceTree = "<group>"; };
+		BB0D5FDA1C609CC800409769 /* Builder.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Builder.m; sourceTree = "<group>"; };
+		BB0D5FDC1C609DF200409769 /* BatmanBuilder.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BatmanBuilder.h; sourceTree = "<group>"; };
+		BB0D5FDD1C609DF200409769 /* BatmanBuilder.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BatmanBuilder.m; sourceTree = "<group>"; };
+		BB0D5FDF1C60A0DF00409769 /* Director.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Director.h; sourceTree = "<group>"; };
+		BB0D5FE01C60A0DF00409769 /* Director.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Director.m; sourceTree = "<group>"; };
 		BB10ABCB1C58C38200E084BF /* Hungury.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Hungury.h; sourceTree = "<group>"; };
 		BB10ABCC1C58C38200E084BF /* Hungury.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Hungury.m; sourceTree = "<group>"; };
 		BB10ABCE1C58C39100E084BF /* Angry.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Angry.h; sourceTree = "<group>"; };
@@ -301,6 +313,21 @@
 			path = Facade;
 			sourceTree = "<group>";
 		};
+		BB0D5FD51C6099C600409769 /* Builder */ = {
+			isa = PBXGroup;
+			children = (
+				BB0D5FD61C609AF800409769 /* Hero.h */,
+				BB0D5FD71C609AF800409769 /* Hero.m */,
+				BB0D5FD91C609CC800409769 /* Builder.h */,
+				BB0D5FDA1C609CC800409769 /* Builder.m */,
+				BB0D5FDC1C609DF200409769 /* BatmanBuilder.h */,
+				BB0D5FDD1C609DF200409769 /* BatmanBuilder.m */,
+				BB0D5FDF1C60A0DF00409769 /* Director.h */,
+				BB0D5FE01C60A0DF00409769 /* Director.m */,
+			);
+			path = Builder;
+			sourceTree = "<group>";
+		};
 		BB10ABCA1C58C36B00E084BF /* State */ = {
 			isa = PBXGroup;
 			children = (
@@ -346,6 +373,7 @@
 				BBC2B1D81C5858E6002F44E4 /* ViewController.h */,
 				BBC2B1D91C5858E6002F44E4 /* ViewController.m */,
 				BBC2B1DB1C5858E6002F44E4 /* Main.storyboard */,
+				BB0D5FD51C6099C600409769 /* Builder */,
 				BB0D5FC81C608EFB00409769 /* Facade */,
 				BB0D5FB81C607AD300409769 /* Chain of Responsibility */,
 				BB0D5FB11C60771600409769 /* Decorator */,
@@ -512,6 +540,8 @@
 				BB0D5F7D1C6040CB00409769 /* Worker.m in Sources */,
 				BB0D5F6D1C6034C100409769 /* AnimalFactory.m in Sources */,
 				BBC2B2021C587C64002F44E4 /* CarElementPrintVisitor.m in Sources */,
+				BB0D5FDB1C609CC800409769 /* Builder.m in Sources */,
+				BB0D5FE11C60A0DF00409769 /* Director.m in Sources */,
 				BB0D5FC41C6082F400409769 /* Hacker.m in Sources */,
 				BB035FAA1C5EF64000C4479C /* Airplane.m in Sources */,
 				BB10ABCD1C58C38200E084BF /* Hungury.m in Sources */,
@@ -537,8 +567,10 @@
 				BB0D5FC11C6082DE00409769 /* Fighter.m in Sources */,
 				BBC2B20B1C588564002F44E4 /* Car.m in Sources */,
 				BB035FA71C5EF0E400C4479C /* ControlTower.m in Sources */,
+				BB0D5FDE1C609DF200409769 /* BatmanBuilder.m in Sources */,
 				BB0D5FD41C6090C000409769 /* Home.m in Sources */,
 				BB0D5FB41C60777900409769 /* Decorator.m in Sources */,
+				BB0D5FD81C609AF800409769 /* Hero.m in Sources */,
 				BB0D5FBB1C607B3100409769 /* Expert.m in Sources */,
 				BB0D5FB71C60778900409769 /* ChildDecorator.m in Sources */,
 				BB0D5F9A1C606E4A00409769 /* Leaf.m in Sources */,
