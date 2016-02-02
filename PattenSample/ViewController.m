@@ -16,10 +16,15 @@
 #import "ControlTower.h"
 #import "Airplane.h"
 
+
+#import "AnimalFactory.h"
+
 typedef NS_ENUM(NSInteger, PattenName) {
+    TestCode,
     PattenNameVisitor,
     PattenNameState,
     PattenNameMediator,
+    PattenNameFactory,
     
 };
 
@@ -27,6 +32,8 @@ typedef NS_ENUM(NSInteger, PattenName) {
 
 @property (nonatomic, weak) IBOutlet UITableView *myTableView;
 @property (nonatomic, strong) NSArray *menuItems;
+
+@property (nonatomic, copy) NSMutableDictionary *aa;
 @end
 
 @implementation ViewController
@@ -37,9 +44,11 @@ typedef NS_ENUM(NSInteger, PattenName) {
     // Do any additional setup after loading the view, typically from a nib.
     
     self.title = @"Patten Sample code";
-    self.menuItems = @[@"Visitor Patten",
+    self.menuItems = @[@"Test code",
+                       @"Visitor Patten",
                        @"State Patten",
-                       @"Mediator Patten"];
+                       @"Mediator Patten",
+                       @"Factory Patten"];
 }
 
 - (void)didReceiveMemoryWarning {
@@ -71,6 +80,9 @@ typedef NS_ENUM(NSInteger, PattenName) {
     [tableView deselectRowAtIndexPath:indexPath animated:YES];
     
     switch (indexPath.row) {
+        case TestCode:
+            [self testSample];
+            break;
         case PattenNameVisitor:
             [self performVisitor];
             break;
@@ -80,9 +92,17 @@ typedef NS_ENUM(NSInteger, PattenName) {
         case PattenNameMediator:
             [self performMediator];
             break;
+        case PattenNameFactory:
+            [self performFactory];
         default:
             break;
     }
+}
+
+#pragma mark - testSample
+- (void)testSample {
+    NSLog(@"%s", __FUNCTION__);
+    
 }
 
 #pragma mark - private methods
@@ -107,6 +127,22 @@ typedef NS_ENUM(NSInteger, PattenName) {
 
 - (void)performState {
     
+    
+//    NSMutableDictionary *a = [NSMutableDictionary new];
+//    a[@"1"]=@"aaa";
+//    a[@"2"]=@"bbb";
+//    
+//    NSLog(@"%d", (int)CFGetRetainCount((__bridge CFTypeRef)a));
+//    
+//    id kk = [a mutableCopy];
+//    
+//    NSLog(@"%@",[kk class]);
+//    _aa = [a mutableCopy];
+//    [self.aa removeObjectForKey:@"1"];
+//    
+//    NSLog(@"%d", (int)CFGetRetainCount((__bridge CFTypeRef)a));
+//    NSLog(@"%d", (int)CFGetRetainCount((__bridge CFTypeRef)_aa));
+    
     /*
      현재 상황에 따라 같은 일에 대해 다르게 반응을 합니다. 
      배가 고플 때 밥을 먹으면 배가 부릅니다. 하지만 배가 부를 때 밥을 또 먹으면 배터질 것 같아 화가 납니다. 
@@ -125,9 +161,11 @@ typedef NS_ENUM(NSInteger, PattenName) {
 - (void)performMediator {
     
     /*
-     비행기가 이착륙하다가 충돌하는 일은 좀체로 일어나지 않습니다. 비행기들끼리 서로 통신하지 않는데도 말이죠. 각각의 비행기는 관제탑하고만 통신을 하고, 관제탑이 각각의 비행기에게 착륙해도 된다 또는 안 된다 식으로 메시지를 보내줍니다. 비행기들끼리 서로서로 직접 통신을 한다면 통신할 경우의 수가 무진장 많아져서 혼란스럽게 됩니다. Mediator 패턴은 관제탑과 같이 통신을 집중시킴으로써 통신의 경로를 줄이고 단순화시키는 역할을 합니다.
-
+     비행기가 이착륙하다가 충돌하는 일은 좀체로 일어나지 않습니다. 비행기들끼리 서로 통신하지 않는데도 말이죠. 각각의 비행기는 관제탑하고만 통신을 하고, 
+     관제탑이 각각의 비행기에게 착륙해도 된다 또는 안 된다 식으로 메시지를 보내줍니다. 비행기들끼리 서로서로 직접 통신을 한다면 통신할 경우의 수가 무진장 
+     많아져서 혼란스럽게 됩니다. Mediator 패턴은 관제탑과 같이 통신을 집중시킴으로써 통신의 경로를 줄이고 단순화시키는 역할을 합니다.
      */
+    
     ControlTower *tower = [ControlTower new];
     
     NSMutableArray *airplanes = [NSMutableArray new];
@@ -142,6 +180,16 @@ typedef NS_ENUM(NSInteger, PattenName) {
     for (Airplane *airplane in airplanes) {
         [airplane start];
     }
+}
+
+- (void)performFactory {
+    
+    Animal *a1= [AnimalFactory create:@"소"];
+    [a1 printDescription];
+    Animal *a2= [AnimalFactory create:@"고양이"];
+    [a2 printDescription];
+    Animal *a3= [AnimalFactory create:@"개"];
+    [a3 printDescription];
 }
 
 @end
