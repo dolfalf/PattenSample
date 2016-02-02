@@ -16,8 +16,10 @@
 #import "ControlTower.h"
 #import "Airplane.h"
 
-
 #import "AnimalFactory.h"
+
+#import "Designer.h"
+#import "Gamer.h"
 
 typedef NS_ENUM(NSInteger, PattenName) {
     TestCode,
@@ -25,7 +27,7 @@ typedef NS_ENUM(NSInteger, PattenName) {
     PattenNameState,
     PattenNameMediator,
     PattenNameFactory,
-    
+    PattenNameTempleteMethod,
 };
 
 @interface ViewController () <UITableViewDataSource, UITableViewDelegate>
@@ -48,7 +50,8 @@ typedef NS_ENUM(NSInteger, PattenName) {
                        @"Visitor Patten",
                        @"State Patten",
                        @"Mediator Patten",
-                       @"Factory Patten"];
+                       @"Factory Patten",
+                       @"Templete Method Patten"];
 }
 
 - (void)didReceiveMemoryWarning {
@@ -94,6 +97,10 @@ typedef NS_ENUM(NSInteger, PattenName) {
             break;
         case PattenNameFactory:
             [self performFactory];
+            break;
+        case PattenNameTempleteMethod:
+            [self performTempleteMethod];
+            break;
         default:
             break;
     }
@@ -183,13 +190,29 @@ typedef NS_ENUM(NSInteger, PattenName) {
 }
 
 - (void)performFactory {
-    
+    /*
+     정확히 어떤 클래스의 인스턴스인지 신경쓰지 않고 구현할 수 있는 장점이 있습니다. 객체 타입이 굉장히 유연해 질 수 있죠.
+     */
     Animal *a1= [AnimalFactory create:@"소"];
     [a1 printDescription];
     Animal *a2= [AnimalFactory create:@"고양이"];
     [a2 printDescription];
     Animal *a3= [AnimalFactory create:@"개"];
     [a3 printDescription];
+}
+
+- (void)performTempleteMethod {
+
+    /*
+     전체적인 로직에는 큰 차이가 없지만 일부분만 바뀌는 비스무레한 몇 가지 클래스가 있다고 칩시다. 
+     일부분을 위해서 전체를 새로 작성할 필요는 없지요. Template Method에서는 전반적인 구현은 
+     상위클래스(주로 Abstract로 만듭니다.)에서 담당하고 부분적인 곳의 구체적인 구현은 하위클래스가 담당합니다.
+     */
+    Worker *designer = [Designer new];
+    [designer work];
+    Worker *gamer = [Gamer new];
+    [gamer work];
+    
 }
 
 @end

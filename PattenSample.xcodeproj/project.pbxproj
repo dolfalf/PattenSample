@@ -15,6 +15,9 @@
 		BB0D5F731C6035E000409769 /* Cow.m in Sources */ = {isa = PBXBuildFile; fileRef = BB0D5F721C6035E000409769 /* Cow.m */; };
 		BB0D5F761C6035ED00409769 /* Cat.m in Sources */ = {isa = PBXBuildFile; fileRef = BB0D5F751C6035ED00409769 /* Cat.m */; };
 		BB0D5F791C6035FD00409769 /* Dog.m in Sources */ = {isa = PBXBuildFile; fileRef = BB0D5F781C6035FD00409769 /* Dog.m */; };
+		BB0D5F7D1C6040CB00409769 /* Worker.m in Sources */ = {isa = PBXBuildFile; fileRef = BB0D5F7C1C6040CB00409769 /* Worker.m */; };
+		BB0D5F801C60423600409769 /* Designer.m in Sources */ = {isa = PBXBuildFile; fileRef = BB0D5F7F1C60423600409769 /* Designer.m */; };
+		BB0D5F831C60424800409769 /* Gamer.m in Sources */ = {isa = PBXBuildFile; fileRef = BB0D5F821C60424800409769 /* Gamer.m */; };
 		BB10ABCD1C58C38200E084BF /* Hungury.m in Sources */ = {isa = PBXBuildFile; fileRef = BB10ABCC1C58C38200E084BF /* Hungury.m */; };
 		BB10ABD01C58C39100E084BF /* Angry.m in Sources */ = {isa = PBXBuildFile; fileRef = BB10ABCF1C58C39100E084BF /* Angry.m */; };
 		BB10ABD31C58C39D00E084BF /* Full.m in Sources */ = {isa = PBXBuildFile; fileRef = BB10ABD21C58C39D00E084BF /* Full.m */; };
@@ -64,6 +67,12 @@
 		BB0D5F751C6035ED00409769 /* Cat.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Cat.m; sourceTree = "<group>"; };
 		BB0D5F771C6035FD00409769 /* Dog.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Dog.h; sourceTree = "<group>"; };
 		BB0D5F781C6035FD00409769 /* Dog.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Dog.m; sourceTree = "<group>"; };
+		BB0D5F7B1C6040CB00409769 /* Worker.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Worker.h; sourceTree = "<group>"; };
+		BB0D5F7C1C6040CB00409769 /* Worker.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Worker.m; sourceTree = "<group>"; };
+		BB0D5F7E1C60423600409769 /* Designer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Designer.h; sourceTree = "<group>"; };
+		BB0D5F7F1C60423600409769 /* Designer.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Designer.m; sourceTree = "<group>"; };
+		BB0D5F811C60424800409769 /* Gamer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Gamer.h; sourceTree = "<group>"; };
+		BB0D5F821C60424800409769 /* Gamer.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Gamer.m; sourceTree = "<group>"; };
 		BB10ABCB1C58C38200E084BF /* Hungury.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Hungury.h; sourceTree = "<group>"; };
 		BB10ABCC1C58C38200E084BF /* Hungury.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Hungury.m; sourceTree = "<group>"; };
 		BB10ABCE1C58C39100E084BF /* Angry.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Angry.h; sourceTree = "<group>"; };
@@ -153,6 +162,19 @@
 			path = Factory;
 			sourceTree = "<group>";
 		};
+		BB0D5F7A1C603BF200409769 /* TemplateMethod */ = {
+			isa = PBXGroup;
+			children = (
+				BB0D5F7B1C6040CB00409769 /* Worker.h */,
+				BB0D5F7C1C6040CB00409769 /* Worker.m */,
+				BB0D5F7E1C60423600409769 /* Designer.h */,
+				BB0D5F7F1C60423600409769 /* Designer.m */,
+				BB0D5F811C60424800409769 /* Gamer.h */,
+				BB0D5F821C60424800409769 /* Gamer.m */,
+			);
+			path = TemplateMethod;
+			sourceTree = "<group>";
+		};
 		BB10ABCA1C58C36B00E084BF /* State */ = {
 			isa = PBXGroup;
 			children = (
@@ -198,6 +220,7 @@
 				BBC2B1D81C5858E6002F44E4 /* ViewController.h */,
 				BBC2B1D91C5858E6002F44E4 /* ViewController.m */,
 				BBC2B1DB1C5858E6002F44E4 /* Main.storyboard */,
+				BB0D5F7A1C603BF200409769 /* TemplateMethod */,
 				BB0D5F691C60335700409769 /* Factory */,
 				BB035FA41C5EEF4400C4479C /* Mediator */,
 				BB10ABCA1C58C36B00E084BF /* State */,
@@ -348,10 +371,13 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				BB0D5F831C60424800409769 /* Gamer.m in Sources */,
 				BB10ABD61C58C3B300E084BF /* Sleeping.m in Sources */,
 				BB10ABD31C58C39D00E084BF /* Full.m in Sources */,
 				BBC2B2081C5883F9002F44E4 /* Engine.m in Sources */,
 				BB10ABDC1C58C3F200E084BF /* State.m in Sources */,
+				BB0D5F801C60423600409769 /* Designer.m in Sources */,
+				BB0D5F7D1C6040CB00409769 /* Worker.m in Sources */,
 				BB0D5F6D1C6034C100409769 /* AnimalFactory.m in Sources */,
 				BBC2B2021C587C64002F44E4 /* CarElementPrintVisitor.m in Sources */,
 				BB035FAA1C5EF64000C4479C /* Airplane.m in Sources */,
